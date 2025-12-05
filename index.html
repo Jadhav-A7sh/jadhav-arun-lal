@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>అరుణ్ లాల్ జాధవ్ – సరపంచ్ అభ్యర్థి</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #00695c, #ff6f00);
+      color: white;
+      padding: 20px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 0.98rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 15px 40px;
+    }
+
+    .hero {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .hero-img {
+      flex: 1 1 220px;
+      min-width: 220px;
+      text-align: center;
+    }
+
+    .hero-content {
+      flex: 2 1 280px;
+    }
+
+    .hero-img img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid #ffb300;
+      object-fit: cover;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e0f2f1;
+      color: #00695c;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .hero-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+      color: #004d40;
+    }
+
+    .hero-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #ff6f00;
+      font-weight: 600;
+    }
+
+    .hero-content p {
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #00796b;
+      color: white;
+    }
+
+    .btn-outline {
+      background: white;
+      color: #00796b;
+      border: 1px solid #00796b;
+    }
+
+    section {
+      margin-top: 25px;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #004d40;
+      border-left: 4px solid #ff6f00;
+      padding-left: 8px;
+    }
+
+    .cards {
+      display: grid;
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 15px 16px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      font-size: 0.95rem;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: #00695c;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 6px;
+      font-size: 0.93rem;
+    }
+
+    ul li {
+      margin-bottom: 4px;
+    }
+
+    .highlight {
+      background: #fffde7;
+      border-left: 4px solid #ffb300;
+      padding: 12px 14px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 0.92rem;
+    }
+
+    .contact-box {
+      display: grid;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #555;
+      margin-top: 25px;
+    }
+
+    .poster-preview {
+      background: #fdf5e6;
+      border-radius: 16px;
+      padding: 18px;
+      margin-top: 10px;
+      border: 1px dashed #ffb300;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .poster-preview h3 {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      color: #d84315;
+      text-transform: uppercase;
+    }
+
+    .poster-preview h4 {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+      color: #004d40;
+    }
+
+    .poster-preview p {
+      margin-bottom: 4px;
+    }
+
+    .poster-tagline {
+      font-weight: 700;
+      color: #ff6f00;
+      margin: 8px 0;
+    }
+
+    @media (min-width: 700px) {
+      .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .hero {
+        padding: 16px;
+      }
+      .hero-img img {
+        width: 170px;
+        height: 170px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>అరుణ్ లాల్ జాధవ్‌కు మీ ఓటు</h1>
+    <p>సర్పంచ్ అభ్యర్థి – మన గ్రామం అభివృద్ధికి అంకితభావంతో పనిచేసే నాయకుడు</p>
+  </header>
+
+  <div class="container">
+    <!-- HERO SECTION -->
+    <div class="hero">
+      <div class="hero-img">
+        <img src="arun lal.jpeg" alt="Arun Lal Jadhav" />
+      </div>
+      <div class="hero-content">
+        <div class="tag">గ్రామ సర్పంచ్ ఎన్నికలు</div>
+        <h2>అరుణ్ లాల్ జాధవ్</h2>
+        <h3>“గ్రామ అభివృద్ధి కోసం ఎల్లప్పుడూ సిద్ధం.”</h3>
+        <p>
+          అరుణ్ లాల్ జాధవ్ గారు నిజాయితీ గల, గ్రామ ప్రజల సమస్యలు తెలుసుకునే నాయకుడు.
+          <strong>ప్రతి ఇల్లు, ప్రతి వీధి, ప్రతి రైతు అభివృద్ధి</strong> ఆయన లక్ష్యం.
+          గ్రామంలో పారదర్శకత, సమయానికి సేవలు, సమస్యలకు త్వరిత పరిష్కారం ఇవ్వడం ఆయన వాగ్దానం.
+        </p>
+        <div class="cta-buttons">
+          <a href="#vision" class="btn btn-primary">అభివృద్ధి లక్ష్యాలు చూడండి</a>
+          <a href="#contact" class="btn btn-outline">ప్రచారంలో చేరండి</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>అరుణ్ లాల్ జాధవ్ గురించి</h2>
+      <div class="card">
+        <p>
+          గ్రామ ప్రజలతో ఎల్లప్పుడూ దగ్గరగా ఉంటూ, సామాజిక సేవ, రైతుల సహాయం, యువత మార్గదర్శనం వంటి కార్యక్రమాలలో పాల్గొంటూ వచ్చిన నాయకుడు. సర్పంచ్ అంటే <strong>ప్రజలకు అందుబాటులో ఉండే, బాధ్యతగల నాయకుడు</strong> కావాలని ఆయన నమ్మకం.
+        </p>
+      </div>
+    </section>
+
+    <!-- VISION & PROMISES -->
+    <section id="vision">
+      <h2>మన గ్రామం కోసం అభివృద్ధి లక్ష్యాలు</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>మెరుగైన రహదారులు & శుభ్రత</h3>
+          <ul>
+            <li>గ్రామ రహదారుల అభివృద్ధి & మరమ్మత్తులు.</li>
+            <li>నిత్య శుభ్రత, డ్రైనేజ్ సదుపాయం, వీధి దీపాలు.</li>
+            <li>పిల్లలు & పెద్దలకు సురక్షిత మార్గాలు.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>రైతులకు మద్దతు</h3>
+          <ul>
+            <li>ప్రభుత్వ పథకాలు, సబ్సిడీలు అందించే సహాయం.</li>
+            <li>నీటి నిర్వహణ & సాగు సౌకర్యాల అభివృద్ధి.</li>
+            <li>ఆధునిక వ్యవసాయ పద్ధతులపై అవగాహన శిబిరాలు.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>యువత & విద్య</h3>
+          <ul>
+            <li>కోచింగ్ సపోర్ట్, డిజిటల్ లెర్నింగ్ సెంటర్లు.</li>
+            <li>క్రీడలు, సాంస్కృతిక కార్యక్రమాలకు ప్రోత్సాహం.</li>
+            <li>ఉద్యోగాలు, ఉన్నత విద్య కోసం మార్గదర్శనం.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>మహిళా సాధికారత</h3>
+          <ul>
+            <li>స్వయం సహాయక సంఘాలకు పూర్తి మద్దతు.</li>
+            <li>చిన్న వ్యాపారాల కోసం నైపుణ్య శిక్షణ.</li>
+            <li>మహిళల భద్రత & గౌరవం కోసం చర్యలు.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>ఆరోగ్యం & శుభ్రమైన వాతావరణం</h3>
+          <ul>
+            <li>నియమిత ఆరోగ్య శిబిరాలు, అవగాహన కార్యక్రమాలు.</li>
+            <li>ప్రతి ఇంటికి స్వచ్ఛమైన తాగునీరు.</li>
+            <li>పచ్చగా, పరిశుభ్రంగా ఉండే గ్రామం.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>పారదర్శక పాలన</h3>
+          <ul>
+            <li>ప్రతి ఒక్కరికీ అందుబాటులో ఉండే గ్రామ సభలు.</li>
+            <li>ఫండ్లు & పనుల వివరాల్లో సంపూర్ణ పారదర్శకత.</li>
+            <li>ఫిర్యాదులకు త్వరిత స్పందన.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <strong>వాగ్దానం:</strong> గ్రామ అభివృద్ధి కోసం అందరిలోకంటే ఎక్కువగా కష్టపడతాను.
+        నిజాయితీ, అంకితభావం మరియు ఐక్యతతో పనిచేస్తాను — అరుణ్ లాల్ జాధవ్
+      </div>
+    </section>
+
+    <!-- POSTER PREVIEW -->
+    <section id="poster">
+      <h2>ప్రచార పోస్టర్ ప్రివ్యూ</h2>
+      <div class="poster-preview">
+        <h3>గ్రామ సర్పంచ్ ఎన్నికలు</h3>
+        <h4>అరుణ్ లాల్ జాధవ్‌కు ఓటు వేయండి</h4>
+        <p class="poster-tagline">“గ్రామ అభివృద్ధి కోసం ఎల్లప్పుడూ సిద్ధం.”</p>
+        <p><strong>✔ ప్రతి ఇల్లు – ప్రతి వీధి అభివృద్ధి</strong></p>
+        <p><strong>✔ రైతులు, యువత, మహిళలకు మద్దతు</strong></p>
+        <p><strong>✔ నిజాయితీ, చురుకైన & పారదర్శక నాయకత్వం</strong></p>
+        <p style="margin-top: 10px;"><em>మీ ఓటు – గ్రామాభివృద్ధికి బలమైన అడుగు.</em></p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>సంప్రదించండి & మద్దతు ఇవ్వండి</h2>
+      <div class="card contact-box">
+        <p><strong>అభ్యర్థి:</strong> అరుణ్ లాల్ జాధవ్</p>
+        <p><strong>స్థానం:</strong> సర్పంచ్ అభ్యర్థి, మన గ్రామం</p>
+        <p><strong>ఫోన్:</strong> +91-9640913235</p>
+        <p><strong>ఈమెయిల్:</strong> example@email.com</p>
+        <p><strong>చిరునామా:</strong> బురుగుపల్లి (జీ)</p>
+        <p>
+          అభివృద్ధి, నిజాయితీ, ఐక్యత నమ్మే ప్రతి ఒక్కరూ  
+          <strong>అరుణ్ లాల్ జాధవ్</strong> గారికి మద్దతు ఇవ్వండి.
+          మీ కుటుంబ సభ్యులు, స్నేహితులు, పొరుగువారిని ప్రోత్సహించండి.
+        </p>
+      </div>
+      <p class="footer-note">
+        ఈ పేజీ అరుణ్ లాల్ జాధవ్ గారి సర్పంచ్ అభ్యర్థిత్వాన్ని మద్దతు ఇస్తూ రూపొందించబడింది.
+      </p>
+    </section>
+  </div>
+</body>
+</html>
+
